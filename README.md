@@ -4,13 +4,20 @@ Early development toward a native PS5 homebrew port of **Star Fox Adventures**, 
 player's own GameCube ISO. Target firmware: **12.40**.
 
 **There is no playable PS5 port or downloadable game release here yet.**
-The implemented code is a read-only GameCube media layer, regional input
-preparation and a release-evidence checker. Synthetic tests and compilation are
-not evidence of gameplay on a console.
+The implemented code includes a read-only GameCube media layer, regional input
+preparation, a release-evidence checker and private native-build recipes.
+Synthetic tests and compilation are not evidence of gameplay on a console.
 
 ## Current scope
 
 Foxhollow is the native PC reference. Its renderer/platform integration must still be adapted and verified on PS5. This repository currently contains the original media-validation tools and test preparation, with no game runtime.
+
+The pinned, unmodified PC reference has now been built and exercised with the
+owned PAL disc: original graphics, German menus, menu input and creation of a
+private save slot. The actual game translation units also compile for the open
+PS5 toolchain into a private library. This is not a linked or installable PS5
+application. See [the current work record](BOOT-WORK.md) and
+[the private PS5 compilation recipe](ps5/README.md).
 
 | Region | Expected disc ID | Gameplay on PS5 |
 | --- | --- | --- |
