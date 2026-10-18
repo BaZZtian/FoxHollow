@@ -1,6 +1,6 @@
 # SFA: current native-port work
 
-Updated: 17 October 2026. This checkout is exclusively for Star Fox Adventures.
+Updated: 19 October 2026. This checkout is exclusively for Star Fox Adventures.
 No other game's runtime, store identity or automation belongs to this project.
 
 ## Established reference

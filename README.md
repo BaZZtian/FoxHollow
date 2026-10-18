@@ -1,5 +1,9 @@
 # Star Fox Adventures: PS5 port research
 
+Status snapshot: **19 October 2026**. The public repository contains the
+tooling and build documentation only; it does not contain a game image,
+original game executable, extracted content or a playable PS5 package.
+
 Early development toward a native PS5 homebrew port of **Star Fox Adventures**, using each
 player's own GameCube ISO. Target firmware: **12.40**.
 
@@ -62,6 +66,18 @@ The command builds the current inspection tool, runs synthetic tests, verifies
 the disc identity/region/number, FST and DOL bounds, and computes SHA-256/SHA-1.
 It does not modify, copy, upload or execute the ISO. It prepares inputs and test
 forms; it does not build a playable game. Native runtime/platform work is pending.
+
+## Public Git and store status
+
+The current work is published as an **unreleased development snapshot**. No
+version tag or GitHub download release has been created because the PS5
+runtime is not linked, deployed or verified on hardware. The repository is
+safe to inspect and contribute to, but it is not a playable release.
+
+The separate Prospero catalog placeholder is **Foxhollow PS5** (`PPSA99573`).
+Its reservation is pending maintainer review in [catalog PR #421](https://github.com/darkxex/ps5-homebrew-catalog/pull/421).
+The reservation contains metadata only: it has no download, source artifact,
+icon, ISO or game data. A merged placeholder would still not be a release.
 
 Outputs are Git-ignored under `private-inputs/star-fox-adventures/<region>/<sha256>/`:
 

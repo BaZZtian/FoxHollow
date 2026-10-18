@@ -19,7 +19,15 @@
     "regional_gameplay_required": true,
     "github_release_allowed_now": false,
     "prospero_catalog_submission_after_verified_release": true,
-    "prospero_immediate_approval_guaranteed": false
+    "prospero_immediate_approval_guaranteed": false,
+    "current_git_status": "unreleased_development_snapshot",
+    "catalog_placeholder": {
+      "name": "Foxhollow PS5",
+      "titleid": "PPSA99573",
+      "status": "pending_maintainer_review",
+      "pull_request": "https://github.com/darkxex/ps5-homebrew-catalog/pull/421",
+      "download": false
+    }
   },
   "projects": [
     {
@@ -34,7 +42,10 @@
       "ps5_gameplay": {
         "NTSC-U": "not_tested",
         "PAL": "not_tested"
-      }
+      },
+      "original_iso_bytes_tested": true,
+      "pal_media_structure_verified": true,
+      "pal_disc_revision": 0
     }
   ],
   "repository": "https://github.com/BaZZtian/PS5_StarFoxAdventures"
