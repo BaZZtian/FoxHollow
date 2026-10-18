@@ -14,6 +14,9 @@ Project: **Star Fox Adventures**. Source repository: [PS5_StarFoxAdventures](htt
 - No NTSC-U image or physical PS5 gameplay test has been completed.
 - No playable PS5 app, console deployment or downloadable game release exists
   for this project.
+- Verification for this snapshot passes in the existing WSL build environment:
+  CTest 3/3 and the Python preparation/release suite 27/27. These are tooling
+  tests and do not constitute PS5 gameplay evidence.
 - The working title **Foxhollow PS5** and proposed identity `PPSA99573` have a
   metadata-only Coming soon reservation in [catalog PR #421](https://github.com/darkxex/ps5-homebrew-catalog/pull/421).
   It is still awaiting maintainer review and contains no download or game data.

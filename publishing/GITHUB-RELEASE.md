@@ -14,6 +14,9 @@ is a synchronized source and documentation update, not a game release.
 - The PC reference has been built privately and the game translation units
   have been compiled privately for the open PS5 toolchain. There is still no
   linked PS5 executable, deployment or verified PS5 gameplay.
+- The public tooling verification for this snapshot is green: CTest 3/3 and
+  the Python preparation/release suite 27/27 in the existing WSL environment.
+  These checks validate the tooling only; they are not console gameplay proof.
 - The Coming soon catalog reservation is [PR #421](https://github.com/darkxex/ps5-homebrew-catalog/pull/421)
   for **Foxhollow PS5** (`PPSA99573`); it remains pending maintainer review.
 
