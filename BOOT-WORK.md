@@ -102,3 +102,12 @@ rather than asking again or claiming an unperformed regional test.
 Private evidence: `local-tests/pc-reference/build-receipt.json`, the timestamped
 PC probe directories, `local-tests/pc-reference/reviewed-observations.json`, and
 `local-tests/ps5-game/build-receipt.json`.
+
+## Store placeholder (19 October 2026)
+
+The owner chose **Foxhollow PS5** as the working title and authorized a Coming
+soon reservation. PR https://github.com/darkxex/ps5-homebrew-catalog/pull/421
+proposes the separate identity **PPSA99573** with all release-specific fields
+null. It awaits maintainer review; no live listing or download is claimed.
+See `publishing/STORE-SUBMISSION.md`. This metadata task does not advance the
+runtime or waive release gates, and does not modify Ivraskel/BZT Orbit.
