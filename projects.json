@@ -22,9 +22,9 @@
     "prospero_immediate_approval_guaranteed": false,
     "current_git_status": "unreleased_development_snapshot",
     "catalog_placeholder": {
-      "name": "Foxhollow PS5",
+      "name": "FoxHollow",
       "titleid": "PPSA99573",
-      "status": "pending_maintainer_review",
+      "status": "reservation_merged_name_change_requested",
       "pull_request": "https://github.com/darkxex/ps5-homebrew-catalog/pull/421",
       "download": false
     }
@@ -48,5 +48,5 @@
       "pal_disc_revision": 0
     }
   ],
-  "repository": "https://github.com/BaZZtian/PS5_StarFoxAdventures"
+  "repository": "https://github.com/BaZZtian/FoxHollow"
 }

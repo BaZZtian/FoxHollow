@@ -2,7 +2,9 @@
 
 Status snapshot: **19 October 2026**.
 
-Project: **Star Fox Adventures**. Source repository: [PS5_StarFoxAdventures](https://github.com/BaZZtian/PS5_StarFoxAdventures).
+Project: **FoxHollow**, a native PS5 port project for Star Fox Adventures.
+Source repository: [FoxHollow](https://github.com/BaZZtian/FoxHollow).
+The current naming and catalog update are recorded in [NAME-CHANGE.md](publishing/NAME-CHANGE.md).
 
 - Read-only media parser and synthetic bounds/region tests are implemented.
 - Private local ISO registration, hashes and test-report templates are implemented.
@@ -17,9 +19,11 @@ Project: **Star Fox Adventures**. Source repository: [PS5_StarFoxAdventures](htt
 - Verification for this snapshot passes in the existing WSL build environment:
   CTest 3/3 and the Python preparation/release suite 27/27. These are tooling
   tests and do not constitute PS5 gameplay evidence.
-- The working title **Foxhollow PS5** and proposed identity `PPSA99573` have a
-  metadata-only Coming soon reservation in [catalog PR #421](https://github.com/darkxex/ps5-homebrew-catalog/pull/421).
-  It is still awaiting maintainer review and contains no download or game data.
+- The Coming soon reservation `PPSA99573` was merged in
+  [catalog PR #421](https://github.com/darkxex/ps5-homebrew-catalog/pull/421).
+  Its name change to **FoxHollow** is requested in
+  [PR #485](https://github.com/darkxex/ps5-homebrew-catalog/pull/485).
+  It contains no download or game data.
 
 ## Runtime work
 

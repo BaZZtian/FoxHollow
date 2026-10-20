@@ -1,4 +1,4 @@
-# Star Fox Adventures: PS5 port research
+# FoxHollow
 
 Status snapshot: **19 October 2026**. The public repository contains the
 tooling and build documentation only; it does not contain a game image,
@@ -37,7 +37,7 @@ the exact candidate build before a game release.
 We need owners of the **NTSC-U** version to run local media checks and share
 reviewed metadata, and developers to contribute compatibility work through PRs.
 See [NTSC testing](community/NTSC-TESTING.md) and [Contributing](CONTRIBUTING.md),
-or open a [regional compatibility report](https://github.com/BaZZtian/PS5_StarFoxAdventures/issues/new?template=regional-compatibility.yml).
+or open a [regional compatibility report](https://github.com/BaZZtian/FoxHollow/issues/new?template=regional-compatibility.yml).
 
 **Do not upload or send ISOs, original executables, REL modules, extracted game
 content, shaders, proprietary SDKs or download links, including in private messages.**
@@ -74,8 +74,10 @@ version tag or GitHub download release has been created because the PS5
 runtime is not linked, deployed or verified on hardware. The repository is
 safe to inspect and contribute to, but it is not a playable release.
 
-The separate Prospero catalog placeholder is **Foxhollow PS5** (`PPSA99573`).
-Its reservation is pending maintainer review in [catalog PR #421](https://github.com/darkxex/ps5-homebrew-catalog/pull/421).
+The separate Prospero catalog placeholder (`PPSA99573`) was accepted in
+[catalog PR #421](https://github.com/darkxex/ps5-homebrew-catalog/pull/421).
+The requested current project name is **FoxHollow**; see
+[the naming update](publishing/NAME-CHANGE.md) for the catalog change request.
 The reservation contains metadata only: it has no download, source artifact,
 icon, ISO or game data. A merged placeholder would still not be a release.
 
