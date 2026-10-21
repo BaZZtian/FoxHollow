@@ -37,7 +37,7 @@ the exact candidate build before a game release.
 We need owners of the **NTSC-U** version to run local media checks and share
 reviewed metadata, and developers to contribute compatibility work through PRs.
 See [NTSC testing](community/NTSC-TESTING.md) and [Contributing](CONTRIBUTING.md),
-or open a [regional compatibility report](https://github.com/BaZZtian/FoxHollow/issues/new?template=regional-compatibility.yml).
+or open a [regional compatibility report](https://github.com/BaZZtian/PS5-FoxHollow/issues/new?template=regional-compatibility.yml).
 
 **Do not upload or send ISOs, original executables, REL modules, extracted game
 content, shaders, proprietary SDKs or download links, including in private messages.**
