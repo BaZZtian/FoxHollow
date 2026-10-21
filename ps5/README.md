@@ -24,4 +24,3 @@ MusyX headers and definitions come from the same Foxhollow source revision.
 The source export, game archive and build logs stay private. The ignored
 `local-tests/ps5-game/build-receipt.json` records the source/header/compiler
 provenance, build result and the fact that no runtime or gameplay was tested.
-See [the current work record](../BOOT-WORK.md) before continuing integration.
