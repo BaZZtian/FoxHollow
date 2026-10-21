@@ -4,7 +4,6 @@ Status snapshot: **19 October 2026**.
 
 Project: **FoxHollow**, a native PS5 port project for Star Fox Adventures.
 Source repository: [FoxHollow](https://github.com/BaZZtian/PS5-FoxHollow).
-The current naming and catalog update are recorded in [NAME-CHANGE.md](publishing/NAME-CHANGE.md).
 
 - Read-only media parser and synthetic bounds/region tests are implemented.
 - Private local ISO registration, hashes and test-report templates are implemented.
