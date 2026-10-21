@@ -21,6 +21,25 @@ typedef struct {
     uint64_t size;
 } GcFile;
 
+/* Original executable metadata only. Addresses are PowerPC guest addresses,
+ * never native pointers or permission to execute the original program. */
+typedef struct {
+    uint64_t disc_offset;
+    uint32_t dol_offset;
+    uint32_t address;
+    uint32_t size;
+    unsigned char executable;
+} GcDolSection;
+
+typedef struct {
+    GcFile file;
+    GcDolSection sections[18];
+    uint32_t section_count;
+    uint32_t bss_address;
+    uint32_t bss_size;
+    uint32_t entry_address;
+} GcDolInfo;
+
 typedef struct {
     GcReader reader;
     unsigned char *fst;
@@ -50,6 +69,9 @@ int gc_disc_read(const GcDisc *disc, const GcFile *file, uint64_t offset,
                  void *buffer, size_t length);
 const char *gc_disc_region(const GcDisc *disc);
 int gc_disc_boot_dol(const GcDisc *disc, GcFile *file);
+/* On failure info is zeroed. This validates file bounds and 32-bit address
+ * arithmetic, not guest memory placement or game/revision compatibility. */
+int gc_disc_dol_info(const GcDisc *disc, GcDolInfo *info);
 
 #ifdef __cplusplus
 }

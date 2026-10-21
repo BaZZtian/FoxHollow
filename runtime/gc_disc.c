@@ -221,29 +221,58 @@ const char *gc_disc_region(const GcDisc *disc) {
     }
 }
 
-int gc_disc_boot_dol(const GcDisc *disc, GcFile *file) {
+int gc_disc_dol_info(const GcDisc *disc, GcDolInfo *info) {
     unsigned char header[0x100];
     uint64_t span = sizeof(header);
-    unsigned int sections = 0u;
-    if (!disc || !disc->fst || !file) return GC_INVALID;
-    memset(file, 0, sizeof(*file));
+    GcDolInfo parsed = {0};
+    if (!info) return GC_INVALID;
+    memset(info, 0, sizeof(*info));
+    if (!disc || !disc->fst || !disc->reader.read_at ||
+        !in_range(disc->reader.size, disc->dol_offset, sizeof(header))) return GC_INVALID;
     if (disc->reader.read_at(disc->reader.context, disc->dol_offset,
                              header, sizeof(header)) != 0) return GC_IO_ERROR;
     for (size_t i = 0u; i < 18u; ++i) {
         uint32_t offset = be32(header + i * 4u);
         uint32_t size = be32(header + 0x90u + i * 4u);
+        uint32_t address = be32(header + 0x48u + i * 4u);
         uint64_t end;
         if (size == 0u) continue;
         if (offset < sizeof(header) ||
-            !in_range(disc->reader.size - disc->dol_offset, offset, size)) {
+            !in_range(disc->reader.size - disc->dol_offset, offset, size) ||
+            (uint64_t)address + size > UINT64_C(0x100000000)) {
             return GC_INVALID;
         }
         end = (uint64_t)offset + size;
+        for (uint32_t j = 0u; j < parsed.section_count; ++j) {
+            const GcDolSection *other = &parsed.sections[j];
+            if ((uint64_t)offset < (uint64_t)other->dol_offset + other->size &&
+                (uint64_t)other->dol_offset < end) return GC_INVALID;
+        }
         if (end > span) span = end;
-        ++sections;
+        GcDolSection *section = &parsed.sections[parsed.section_count++];
+        section->disc_offset = (uint64_t)disc->dol_offset + offset;
+        section->dol_offset = offset;
+        section->address = address;
+        section->size = size;
+        section->executable = (unsigned char)(i < 7u);
     }
-    if (sections == 0u) return GC_INVALID;
-    file->offset = disc->dol_offset;
-    file->size = span;
+    if (parsed.section_count == 0u) return GC_INVALID;
+    parsed.bss_address = be32(header + 0xd8);
+    parsed.bss_size = be32(header + 0xdc);
+    parsed.entry_address = be32(header + 0xe0);
+    if ((uint64_t)parsed.bss_address + parsed.bss_size > UINT64_C(0x100000000))
+        return GC_INVALID;
+    parsed.file.offset = disc->dol_offset;
+    parsed.file.size = span;
+    *info = parsed;
     return GC_OK;
+}
+
+int gc_disc_boot_dol(const GcDisc *disc, GcFile *file) {
+    GcDolInfo info;
+    if (!file) return GC_INVALID;
+    memset(file, 0, sizeof(*file));
+    const int result = gc_disc_dol_info(disc, &info);
+    if (result == GC_OK) *file = info.file;
+    return result;
 }
