@@ -20,8 +20,7 @@ The pinned, unmodified PC reference has now been built and exercised with the
 owned PAL disc: original graphics, German menus, menu input and creation of a
 private save slot. The actual game translation units also compile for the open
 PS5 toolchain into a private library. This is not a linked or installable PS5
-application. See the public build instructions in
-[the private PS5 compilation recipe](ps5/README.md).
+application. See the [PS5 build instructions](ps5/README.md).
 
 | Region | Expected disc ID | Gameplay on PS5 |
 | --- | --- | --- |
@@ -76,8 +75,8 @@ safe to inspect and contribute to, but it is not a playable release.
 
 The separate Prospero catalog placeholder (`PPSA99573`) was accepted in
 [catalog PR #421](https://github.com/darkxex/ps5-homebrew-catalog/pull/421).
-The requested current project name is **FoxHollow**; see
-the catalog pull request for the name change.
+The current project name is **FoxHollow**; see
+[catalog PR #485](https://github.com/darkxex/ps5-homebrew-catalog/pull/485) for the name change.
 The reservation contains metadata only: it has no download, source artifact,
 icon, ISO or game data. A merged placeholder would still not be a release.
 
