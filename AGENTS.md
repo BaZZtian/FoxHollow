@@ -69,3 +69,9 @@ pull request, build, release, and Store/catalog submission.**
   established: **do not publish, package, merge, or submit a release**.
 - Do not bypass these rules to meet a deadline. This document is operational
   guidance only: it does not itself license, transfer, or revoke any copyright.
+
+## 4. Project-specific known rights (not a complete legal audit)
+
+- Upstream game engine: `JackPriceBurns/foxhollow` at `55371a2354ef36d4aabe53dfb78c19aa7f493737` (CC0 declaration verified). SFA decompilation: `zcanann/SFA-Decomp` (CC0 declaration).
+- The public FoxHollow PS5 tooling repository already contains its own MIT license; that grant is not retroactively revoked. New original contributions require an explicit rights decision. Nintendo assets and other dependencies are separately owned.
+- No verified playable PS5 application or blanket third-party clearance is claimed.
