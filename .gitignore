@@ -76,3 +76,6 @@ __pycache__/
 **/*credentials*.json
 **/*private*.log
 **/*.dmp
+
+# Development instructions remain outside the app repository.
+/AGENTS.md
