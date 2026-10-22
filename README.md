@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Star Fox Adventures on PlayStation 5</strong><br>
-  An independent native PS5 homebrew project by <a href="https://github.com/BaZZtian">BaZZtian</a>.
+  An unofficial PS5 homebrew port project based on Foxhollow and SFA-Decomp, maintained by <a href="https://github.com/BaZZtian">BaZZtian</a>.
 </p>
 
 <p align="center">
