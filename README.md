@@ -15,46 +15,28 @@ foundation to a dedicated PS5 homebrew project. That foundation is built on
 [SFA-Decomp](https://github.com/zcanann/SFA-Decomp) and
 [Aurora](https://github.com/encounter/aurora).
 
-The PS5 integration is maintained here by **BaZZtian**. The original
-decompilation, native PC port and renderer are the work of their respective
-authors. This repository does not claim ownership of those projects.
+Maintained by **BaZZtian**, with the goal of a standalone PS5 homebrew title
+using native graphics, audio and DualSense input. FoxHollow is dedicated to
+this game and uses the native PC port as its foundation.
 
-The intended experience is a standalone native application using your own
-game data, with PS5 graphics, audio, DualSense controls and isolated saves.
-Those platform features are still being integrated and verified.
+**Status: in development. A playable PS5 download is not available yet.**
 
-## Availability
+## Requirements
 
-**In development. No playable PS5 build or downloadable application release
-is available yet.**
+- A homebrew-capable PlayStation 5. Target firmware: **12.40**.
+- Your own legally obtained **Star Fox Adventures** GameCube disc image.
 
-The current source includes the native read-only media adapter and its
-GameCube filesystem and executable-boundary validation. This is groundwork
-for the port, not an installable game. Successful component builds do not
-establish console gameplay.
+The planned disc profiles are **Europe / PAL (`GSAP01`)** and
+**North America / NTSC-U (`GSAE01`)**. PS5 gameplay compatibility is still
+being implemented and tested.
 
-The Prospero Store identity is **PPSA99573**. The reservation is a Coming soon
-placeholder; it is not a playable release or a download.
+**No game data is included.** Disc images, original game code, textures, music
+and saves must not be uploaded to this repository or attached to issues.
 
-## Your game data
+## Download and installation
 
-You must supply your own legally obtained copy of **Star Fox Adventures**.
-The dedicated app is intended to read the game data locally from that image.
-No game image, original executable, textures, music or saves are supplied.
-Do not upload game files to this repository or attach them to issues.
-
-| Disc profile | Disc ID | PS5 gameplay status |
-| --- | --- | --- |
-| Europe / PAL | `GSAP01` | Not verified |
-| North America / NTSC-U | `GSAE01` | Not verified |
-
-Recognizing a disc ID does not establish support for every revision. Both
-regions require real gameplay verification before a downloadable release.
-
-Background music must come from the user's own image through a local audio
-pipeline. Original or converted music will not be included in public packages.
-The menu artwork shown above is original project branding; the explorer
-mascot is not a replacement character in the game.
+Installation instructions will accompany the first tested app release on the
+[Releases page](https://github.com/BaZZtian/PS5-FoxHollow/releases).
 
 ## Credits
 
@@ -67,20 +49,15 @@ This project depends on the work of the following upstream communities:
 | [Aurora](https://github.com/encounter/aurora) | encounter and Aurora contributors | Graphics compatibility framework used by the native foundation |
 | [ps5-payload-sdk](https://github.com/ps5-payload-dev/sdk) | Open PS5 payload SDK contributors | Open homebrew target toolchain |
 
-The currently reviewed Foxhollow foundation is pinned to
-`55371a2354ef36d4aabe53dfb78c19aa7f493737`. Its PC platform support and
-upstream gameplay claims are not PS5 test results for this repository.
-
 ## Licensing and attribution
 
 SFA-Decomp and Foxhollow publish CC0-1.0 declarations. Their notices and those
 of separately licensed dependencies remain applicable. A root license does
 not automatically cover every nested component or the original game data.
 
-The existing [MIT license](LICENSE) applies to independently authored tooling
-already distributed under that grant. It does not transfer ownership of the
-original game or relicense upstream work. Each component's actual provenance
-and distribution terms must be checked before inclusion in a release.
+The existing [MIT license](LICENSE) covers the independently authored code
+previously distributed under that grant. Upstream components retain their own
+licenses, copyright notices and attribution.
 
 This is an unofficial homebrew project, not affiliated with, endorsed by or
 sponsored by Nintendo or Rare. Original game content remains the property of
